@@ -1,0 +1,93 @@
+//delete file
+windows  :!del TEST
+Unix     :!rm TEST
+
+<control-w>-s 	Diviser horizontalement
+<control-w>-v 	Diviser verticalement 
+
+<control-w>-w 	Passer à la fenêtre suivante
+<control-w>-n 	Ouvrir un fichier vierge dans une nouvelle fenêtre
+<control-w>-q 	Fermer la fenêtre
+
+:%s/A/B/g 	Remplacer tous (g) les A par des B 
+:%s/A/B/gc 	Remplacement interactif (g) les A par des B 
+
+set nofoldenable 
+
+:colorscheme
+dark (set background=light):
+Tomorrow-night
+jellybeans
+railscasts
+molokai
+Monokai
+wombat
+abra
+solarized
+atom
+
+light (set background=light):
+Tomorrow
+whitebox
+solarized
+
+comment single <Leader>c<space> in visual mode 
+comment multiple line <Leader>cm in visual mode 
+
+<leader>gs :Gstatus
+<leader>gd :Gdiff
+<leader>gc :Gcommit
+<leader>gb :Gblame
+<leader>gl :Glog
+<leader>gp :Git push
+<leader>gw :Gwrite
+:Git ___ will pass anything along to git.
+
+:Ack
+
+<leader>tt Outline
+CTRL P fast file finder
+,,w fastmoving  easymotion
+
+
+supprimmer barre fonction (remove indent plugin)
+let NERDTreeQuitOnOpen=0 (garder nerdtree ouvert)
+set nolist (enlever visible space)
+
+" Disable search highlighting with <CR> in normal mode (CR carriage return/retour chariot)
+nnoremap <CR> :nohlsearch<CR><CR>
+<< unindent selection
+
+buffer:
+buffers (list buffers)
+buffer number (show buffer )
+b number (show buffer )
+bu number (show buffer )
+
+save session
+<leader>sl
+<leader>ss
+
+snippets (CTRL-K pour valider un snippet)
+mapping change tab  
+
+" navigate windows with meta+arrows
+map <M-Right> <c-w>l
+map <M-Left> <c-w>h
+map <M-Up> <c-w>k
+map <M-Down> <c-w>j
+imap <M-Right> <ESC><c-w>l
+imap <M-Left> <ESC><c-w>h
+imap <M-Up> <ESC><c-w>k
+imap <M-Down> <ESC><c-w>j
+
+<leader>gt is the keyboard shortcut for :tabnext and gT for :tabprevious.
+mapping tab 
+" CTRL-Tab is next tab
+noremap <C-Tab> :<C-U>tabnext<CR>
+inoremap <C-Tab> <C-\><C-N>:tabnext<CR>
+cnoremap <C-Tab> <C-C>:tabnext<CR>
+" CTRL-SHIFT-Tab is previous tab
+noremap <C-S-Tab> :<C-U>tabprevious<CR>
+inoremap <C-S-Tab> <C-\><C-N>:tabprevious<CR>
+cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
