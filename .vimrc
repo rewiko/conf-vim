@@ -1,5 +1,5 @@
 " Modeline and Notes {
-" vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker spell:
+" vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker:
 "
 "                    __ _ _____              _
 "         ___ _ __  / _/ |___ /      __   __(_)_ __ ___
@@ -105,8 +105,8 @@
     set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
     set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
     set virtualedit=onemore             " Allow for cursor beyond last character
-    set history=1000                    " Store a ton of history (default is 20)
-    set spell                           " Spell checking on
+    set history=2000                    " Store a ton of history (default is 20)
+    set nospell                         " Spell checking off
     set hidden                          " Allow buffer switching without saving
     set iskeyword-=.                    " '.' is an end of word designator
     set iskeyword-=#                    " '#' is an end of word designator
@@ -162,7 +162,8 @@
         let g:solarized_termtrans=1
         let g:solarized_contrast="normal"
         let g:solarized_visibility="normal"
-        color solarized             " Load a colorscheme
+        "color solarized             " Load a colorscheme
+        color Tomorrow-Night         " Load a colorscheme
     endif
 
     set tabpagemax=15               " Only show 15 tabs
@@ -207,7 +208,7 @@
     set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
     set scrolljump=5                " Lines to scroll when cursor leaves screen
     set scrolloff=3                 " Minimum lines to keep above and below cursor
-    set foldenable                  " Auto fold code
+    set nofoldenable                  " Auto fold code
     set list
     set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
@@ -279,6 +280,15 @@
     noremap j gj
     noremap k gk
 
+    nnoremap <silent> <leader>h :noh<CR>
+    " CTRL-Tab is next tab
+    noremap <C-Tab> :<C-U>tabnext<CR>
+    inoremap <C-Tab> <C-\><C-N>:tabnext<CR>
+    cnoremap <C-Tab> <C-C>:tabnext<CR>
+    " CTRL-SHIFT-Tab is previous tab
+    noremap <C-S-Tab> :<C-U>tabprevious<CR>
+    inoremap <C-S-Tab> <C-\><C-N>:tabprevious<CR>
+    cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
     " End/Start of line motion keys act relative to row/wrap width in the
     " presence of `:set wrap`, and relative to line for `:set nowrap`.
     " Default vim behaviour is to act relative to text line in both cases
@@ -519,6 +529,8 @@
 
             let NERDTreeShowBookmarks=1
             let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
+            " Change CWD on each tree root change
+            "let NERDTreeChDirMode=2
             let NERDTreeChDirMode=0
             let NERDTreeQuitOnOpen=1
             let NERDTreeMouseMode=2
