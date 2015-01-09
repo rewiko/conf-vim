@@ -1,3 +1,6 @@
+# conf-vim  
+git clone -b 3.0 https://github.com/rewiko/conf-vim.git
+
 # spf13-vim : Steve Francia's Vim Distribution
 
                     __ _ _____              _
