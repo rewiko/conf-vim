@@ -122,7 +122,6 @@
             endif
             Bundle 'bling/vim-bufferline'
             Bundle 'Lokaltog/vim-easymotion'
-            Bundle 'jistr/vim-nerdtree-tabs'
             Bundle 'flazz/vim-colorschemes'
             Bundle 'mbbill/undotree'
             ""Bundle 'nathanaelkane/vim-indent-guides'
