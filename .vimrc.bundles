@@ -101,8 +101,8 @@
 
     " General {
         if count(g:spf13_bundle_groups, 'general')
-            "Bundle 'scrooloose/nerdtree'
-            Bundle 'jistr/vim-nerdtree-tabs'
+            Bundle 'scrooloose/nerdtree'
+            "Bundle 'jistr/vim-nerdtree-tabs'
             Bundle 'altercation/vim-colors-solarized'
             Bundle 'spf13/vim-colors'
             Bundle 'tpope/vim-surround'
