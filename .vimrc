@@ -630,6 +630,11 @@
     "}
 
     " TagBar {
+         if has("mouse_sgr")
+            set ttymouse=sgr
+        else
+            set ttymouse=xterm2
+        end
         if isdirectory(expand("~/.vim/bundle/tagbar/"))
             nnoremap <silent> <leader>tt :TagbarToggle<CR>
             nnoremap <silent> <leader>k :TagbarToggle<CR>
