@@ -524,7 +524,8 @@
     " NerdTree {
         if isdirectory(expand("~/.vim/bundle/nerdtree"))
             map <C-e> <plug>NERDTreeTabsToggle<CR>
-            map <leader>e :NERDTreeFind<CR>
+            map <leader>e :NERDTreeTabsToggle<CR>
+            map <leader>j :NERDTreeTabsToggle<CR>
             nmap <leader>nt :NERDTreeFind<CR>
 
             let NERDTreeShowBookmarks=1
@@ -631,6 +632,7 @@
     " TagBar {
         if isdirectory(expand("~/.vim/bundle/tagbar/"))
             nnoremap <silent> <leader>tt :TagbarToggle<CR>
+            nnoremap <silent> <leader>k :TagbarToggle<CR>
 
             " If using go please install the gotags program using the following
             " go install github.com/jstemmer/gotags
