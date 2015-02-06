@@ -523,9 +523,9 @@
 
     " NerdTree {
         if isdirectory(expand("~/.vim/bundle/nerdtree"))
-            map <C-e> <plug>NERDTreeTabsToggle<CR>
-            map <leader>e :NERDTreeTabsToggle<CR>
-            map <leader>j :NERDTreeTabsToggle<CR>
+            map <C-e> <plug>NERDTreeToggle<CR>
+            map <leader>e :NERDTreeToggle<CR>
+            map <leader>j :NERDTreeToggle<CR>
             nmap <leader>nt :NERDTreeFind<CR>
 
             let NERDTreeShowBookmarks=1
