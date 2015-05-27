@@ -1178,7 +1178,7 @@
     endif
 " }
 
-"let g:autoclose_on = 0
+let g:autoclose_on = 0
 function! ConditionalPairMap(open, close)
   let line = getline('.')
   let col = col('.')
