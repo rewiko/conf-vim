@@ -170,7 +170,8 @@
         let g:solarized_contrast="normal"
         let g:solarized_visibility="normal"
         "color solarized             " Load a colorscheme
-        color Tomorrow-Night         " Load a colorscheme
+        "color Tomorrow-Night        " Load a colorscheme
+        color molokai         " Load a colorscheme
     endif
 
     set tabpagemax=15               " Only show 15 tabs
@@ -540,7 +541,7 @@
             " Change CWD on each tree root change
             "let NERDTreeChDirMode=2
             let NERDTreeChDirMode=0
-            let NERDTreeQuitOnOpen=1
+            let NERDTreeQuitOnOpen=0
             let NERDTreeMouseMode=2
             let NERDTreeShowHidden=1
             let NERDTreeKeepTreeInNewTab=1
